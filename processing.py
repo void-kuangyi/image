@@ -2,7 +2,7 @@ from PIL import Image, ImageOps
 import requests
 from io import BytesIO
 
-def function():
+def function(variable):
     url = "https://maps.googleapis.com/maps/api/staticmap?center=51.450102,%205.489436&zoom=16&size=400x400&key=AIzaSyDLLb5FAlXngV3Q16xGZAkNKxwMCNMJBtc"
     response = requests.get(url)
     img = Image.open(BytesIO(response.content)).convert('L')  
@@ -15,4 +15,4 @@ def function():
     for y in range(4):
         for x in range(4):
             data.append(rawData[x,y])
-    return str(data)
+    return str(data) + variable
