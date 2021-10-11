@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 from flask import request
-from image.processing import function
+from processing import function
 
 app = Flask(__name__)
 @app.route("/", methods=['GET'])
