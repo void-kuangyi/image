@@ -7,6 +7,7 @@ app = Flask(__name__)
 @app.route("/<variable>", methods=['GET'])
 def index(variable):
     if request.method == 'GET':
+        
         return function(variable)
 
 if __name__ == "__main__":
