@@ -15,4 +15,4 @@ def function(variable):
     for y in range(4):
         for x in range(4):
             data.append(rawData[x,y])
-    return str(data) + variable
+    return str(data).replace("[","").replace("]","")
